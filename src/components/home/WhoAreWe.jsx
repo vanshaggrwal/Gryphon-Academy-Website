@@ -17,6 +17,7 @@ export default function WhoAreWe() {
 
   return (
     <section
+      id="about"
       className="relative overflow-hidden bg-[#01224F] py-16 sm:py-20 lg:py-24"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}

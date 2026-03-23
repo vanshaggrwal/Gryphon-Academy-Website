@@ -20,12 +20,21 @@ import WhoAreWe from "../components/home/WhoAreWe";
 
 export default function Home() {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
+  const [isNavbarFullWidth, setIsNavbarFullWidth] = useState(false);
   const logoSrc =
     "https://res.cloudinary.com/dcjmaapvi/image/upload/v1740489025/ga-hori_ylcnm3.png";
 
   useEffect(() => {
     const onScroll = () => {
       setIsNavbarVisible(window.scrollY > 8);
+
+      const whoAreWeSection = document.getElementById("about");
+      if (!whoAreWeSection) {
+        return;
+      }
+
+      const sectionTop = whoAreWeSection.getBoundingClientRect().top;
+      setIsNavbarFullWidth(sectionTop <= 0);
     };
 
     onScroll();
@@ -35,7 +44,11 @@ export default function Home() {
 
   return (
     <>
-      <Navbar isVisible={isNavbarVisible} logoSrc={logoSrc} />
+      <Navbar
+        isVisible={isNavbarVisible}
+        isFullWidth={isNavbarFullWidth}
+        logoSrc={logoSrc}
+      />
 
       <Hero showTopLeftLogo={!isNavbarVisible} logoSrc={logoSrc} />
 

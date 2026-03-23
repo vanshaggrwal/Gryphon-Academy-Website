@@ -1,13 +1,20 @@
-export default function Navbar({ isVisible, logoSrc }) {
+export default function Navbar({ isVisible, isFullWidth, logoSrc }) {
   return (
     <nav
-      className={`fixed z-50 w-full bg-[#01224F] shadow transition-all duration-300 ${
+      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
         isVisible
           ? "translate-y-0 opacity-100"
           : "-translate-y-full opacity-0 pointer-events-none"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <div
+        className={`mx-auto flex items-center justify-between px-4 py-4 transition-[width,border-radius,background-color,box-shadow,padding] duration-500 ease-in-out ${
+          isFullWidth
+            ? "rounded-none bg-[#01224F] shadow"
+            : "rounded-xl bg-[#01224F]/95 shadow-lg"
+        }`}
+        style={{ width: isFullWidth ? "100%" : "min(100%, 1240px)" }}
+      >
         <a href="#home" className="shrink-0">
           <img
             src={logoSrc}
@@ -16,7 +23,7 @@ export default function Navbar({ isVisible, logoSrc }) {
           />
         </a>
 
-        <div className="hidden md:flex gap-8 font-medium text-white">
+        <div className="hidden md:flex gap-8 px-8 font-medium text-white">
           <a href="#home" className="hover:text-yellow-400 transition">
             Home
           </a>
