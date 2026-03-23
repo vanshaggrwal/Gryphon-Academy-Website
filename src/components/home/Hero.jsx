@@ -13,6 +13,11 @@ export default function Hero({ showTopLeftLogo, logoSrc }) {
     }
 
     const updateVideoPlayback = () => {
+      if (document.hidden) {
+        videoEl.pause();
+        return;
+      }
+
       const rect = sectionEl.getBoundingClientRect();
       const viewportHeight =
         window.innerHeight || document.documentElement.clientHeight;
@@ -34,13 +39,24 @@ export default function Hero({ showTopLeftLogo, logoSrc }) {
       videoEl.pause();
     };
 
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        videoEl.pause();
+        return;
+      }
+
+      updateVideoPlayback();
+    };
+
     updateVideoPlayback();
     window.addEventListener("scroll", updateVideoPlayback, { passive: true });
     window.addEventListener("resize", updateVideoPlayback);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
 
     return () => {
       window.removeEventListener("scroll", updateVideoPlayback);
       window.removeEventListener("resize", updateVideoPlayback);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
     };
   }, []);
 
