@@ -1,42 +1,42 @@
 export default function Hero() {
   return (
-    <section className="pt-32 pb-24 bg-[#01224F] text-white">
+    <section
+      id="home"
+      className="relative h-screen min-h-170 w-full overflow-hidden"
+    >
+      <video
+        className="absolute inset-0 h-full w-full object-cover"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source
+          src="https://www.iima.ac.in/sites/default/files/2024-06/IIMA%20Home%20page%20video%202024-06-06%20Compressed%20%281%29.mp4"
+          type="video/mp4"
+        />
+      </video>
 
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center px-6">
+      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(1,16,42,0.25)_0%,rgba(1,16,42,0.25)_42%,rgba(1,16,42,0.25)_100%)]" />
 
-        <div>
-
-          <h1 className="text-5xl font-bold leading-tight mb-6">
-            Build Your Career With
-            {" "}
-            <span className="text-yellow-400">Industry Ready Skills</span>
+      <div className="relative z-10 flex h-full w-full items-center justify-center px-4">
+        <div className="text-center">
+          <h1
+            className="whitespace-nowrap font-bold leading-tight text-white"
+            style={{ fontSize: "clamp(1.05rem, 4.8vw, 4.5rem)" }}
+          >
+            Build Your Career With Industry Ready Skills
           </h1>
 
-          <p className="text-lg text-white mb-8">
-            Professional training programs in aviation, hospitality
-            and corporate sectors with placement support.
+          <p
+            className="mt-4 whitespace-nowrap text-white"
+            style={{ fontSize: "clamp(0.82rem, 1.75vw, 1.5rem)" }}
+          >
+            Professional training programs in aviation, hospitality and
+            corporate sectors with placement support.
           </p>
-
-          <div className="flex gap-4">
-            <button className="bg-yellow-400 text-[#01224F] px-6 py-3 rounded-lg font-semibold hover:bg-yellow-300 transition">
-              Explore Programs
-            </button>
-
-            <button className="border border-white px-6 py-3 rounded-lg hover:bg-white hover:bg-opacity-10 transition">
-              Download Brochure
-            </button>
-          </div>
-
         </div>
-
-        <img
-          src="/students.png"
-          alt="Professional training students at work"
-          className="rounded-xl shadow-2xl"
-        />
-
       </div>
-
     </section>
   );
 }

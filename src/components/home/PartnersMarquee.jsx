@@ -53,6 +53,9 @@ export default function PartnersMarquee() {
       <div className="partners-marquee-wave partners-marquee-wave-bottom" />
 
       <div className="partners-marquee-surface w-full border-b border-white/15 bg-[#eef0f2] px-3 py-10 md:px-4 md:py-20">
+        <h2 className="mb-6 text-center text-4xl font-bold tracking-tight text-[#0f2b5c] md:mb-8 md:text-5xl">
+          Our Partners
+        </h2>
         <MarqueeTrack partners={topRowPartners} />
         <div className="mt-13.5">
           <MarqueeTrack partners={bottomRowPartners} reverse />

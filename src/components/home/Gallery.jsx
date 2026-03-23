@@ -40,12 +40,12 @@ const galleryCards = [
 export default function Gallery() {
   return (
     <section className="bg-[#f2f2f3] py-6 sm:py-8 lg:py-8">
-      <div className="mx-auto max-w-[1400px] px-3 sm:px-4">
-        <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-12 lg:grid-rows-2 lg:gap-1.5 lg:h-[78vh] lg:max-h-[980px] lg:min-h-[640px]">
+      <div className="mx-auto max-w-350 px-3 sm:px-4">
+        <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-12 lg:grid-rows-2 lg:gap-1.5 lg:h-[78vh] lg:max-h-245 lg:min-h-160">
           {galleryCards.map((card) => (
             <article
               key={card.id}
-              className={`group relative min-h-[260px] overflow-hidden rounded-2xl bg-slate-900 sm:min-h-[300px] lg:h-full ${card.className}`}
+              className={`group relative min-h-65 overflow-hidden rounded-2xl bg-slate-900 sm:min-h-75 lg:h-full ${card.className}`}
             >
               <img
                 src={card.image}
@@ -63,7 +63,7 @@ export default function Gallery() {
               )}
               <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 lg:p-7">
                 <h3
-                  className="max-w-[20ch] text-[20px] font-semibold leading-[1.16] tracking-tight text-transparent [background-image:linear-gradient(90deg,#d94f9f,#f1a352)] bg-clip-text sm:text-[22px] lg:text-[30px]"
+                  className="max-w-[20ch] text-[20px] font-semibold leading-[1.16] tracking-tight text-transparent bg-[linear-gradient(90deg,#d94f9f,#f1a352)] bg-clip-text sm:text-[22px] lg:text-[30px]"
                 >
                   {card.title}
                 </h3>
