@@ -1,10 +1,57 @@
+import { useEffect, useRef } from "react";
+
 export default function Hero({ showTopLeftLogo, logoSrc }) {
+  const sectionRef = useRef(null);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const sectionEl = sectionRef.current;
+    const videoEl = videoRef.current;
+
+    if (!sectionEl || !videoEl) {
+      return;
+    }
+
+    const updateVideoPlayback = () => {
+      const rect = sectionEl.getBoundingClientRect();
+      const viewportHeight =
+        window.innerHeight || document.documentElement.clientHeight;
+      const visiblePixels = Math.max(
+        0,
+        Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0),
+      );
+      const visibleRatio = visiblePixels / Math.max(rect.height, 1);
+
+      // Production behavior: pause only when hero is fully out of view.
+      if (visiblePixels > 0) {
+        const playPromise = videoEl.play();
+        if (playPromise && typeof playPromise.catch === "function") {
+          playPromise.catch(() => {});
+        }
+        return;
+      }
+
+      videoEl.pause();
+    };
+
+    updateVideoPlayback();
+    window.addEventListener("scroll", updateVideoPlayback, { passive: true });
+    window.addEventListener("resize", updateVideoPlayback);
+
+    return () => {
+      window.removeEventListener("scroll", updateVideoPlayback);
+      window.removeEventListener("resize", updateVideoPlayback);
+    };
+  }, []);
+
   return (
     <section
       id="home"
+      ref={sectionRef}
       className="relative h-screen min-h-170 w-full overflow-hidden"
     >
       <video
+        ref={videoRef}
         className="absolute inset-0 h-full w-full object-cover"
         autoPlay
         muted
