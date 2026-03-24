@@ -18,6 +18,7 @@ import Footer from "../components/home/Footer";
 import Solutions from "../components/home/Solutions";
 import WhoAreWe from "../components/home/WhoAreWe";
 import Brochure from "../components/home/Brochure";
+import Training from "../components/home/Training";
 
 export default function Home() {
   const [isNavbarVisible, setIsNavbarVisible] = useState(false);
@@ -57,6 +58,7 @@ export default function Home() {
 
       <AudiencePathways />
       <Brochure />
+      <Training />
 
       <Gallery />
 

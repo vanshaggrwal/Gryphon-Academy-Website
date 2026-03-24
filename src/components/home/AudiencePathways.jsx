@@ -4,82 +4,42 @@ const pathways = [
   {
     id: "colleges",
     label: "For Colleges",
-    title: "Scalable growth stack for modern campuses.",
-    cards: [
-      {
-        tag: "Admissions",
-        heading: "Admission Engine",
-        detail: "Lead funnel, counseling, and conversion workflows.",
-      },
-      {
-        tag: "Branding",
-        heading: "Campus Positioning",
-        detail: "Digital-first branding for better visibility.",
-      },
-      {
-        tag: "Academic",
-        heading: "Induction Programs",
-        detail: "Structured onboarding and readiness modules.",
-      },
-      {
-        tag: "Placement",
-        heading: "Placement Ops",
-        detail: "Drive planning, recruiter outreach, and reporting.",
-      },
+    title: "Your Institution's Complete Growth Partner.",
+    intro:
+      "From student training and faculty development to digital branding, admissions, and corporate placement - we handle every dimension of institutional growth, so you focus on academics.",
+    points: [
+      "Professional training embedded in your curriculum (IRP & CLDP)",
+      "Faculty Development Programmes (FDPs)",
+      "Digital marketing, branding & website development",
+      "End-to-end admissions support",
     ],
   },
   {
     id: "corporate",
     label: "For Corporate",
-    title: "Reliable hiring and capability building for teams.",
-    cards: [
-      {
-        tag: "Talent",
-        heading: "Zero-Cost Hiring",
-        detail: "Pre-vetted candidates aligned to role needs.",
-      },
-      {
-        tag: "L&D",
-        heading: "Corporate Upskilling",
-        detail: "Focused training tracks for business goals.",
-      },
-      {
-        tag: "Assessment",
-        heading: "Skill Validation",
-        detail: "Benchmarked evaluation for hiring confidence.",
-      },
-      {
-        tag: "Productivity",
-        heading: "Role Enablement",
-        detail: "Fast ramp-up frameworks for new hires.",
-      },
+    title: "Trained Talent. Zero Cost. Pan-India.",
+    intro:
+      "Skip the friction of unready candidates. We deliver pre-trained, role-aligned graduates from 55+ institutions and manage your entire campus drive - at no charge.",
+    points: [
+      "Zero-cost end-to-end campus hiring",
+      "Pre-trained talent across all major streams",
+      "JD-aligned candidate preparation",
+      "Pan-India drives across 25+ cities",
+      "Corporate training & L&D solutions",
     ],
   },
   {
     id: "students",
     label: "For Students",
-    title: "Career-focused preparation with placement support.",
-    cards: [
-      {
-        tag: "Learning",
-        heading: "Job-Ready Tracks",
-        detail: "Industry-aligned curriculum with live practice.",
-      },
-      {
-        tag: "Mentorship",
-        heading: "Expert Guidance",
-        detail: "Weekly support and personalized roadmaps.",
-      },
-      {
-        tag: "Interview",
-        heading: "Mock Rounds",
-        detail: "Practical interview prep and performance feedback.",
-      },
-      {
-        tag: "Career",
-        heading: "Placement Support",
-        detail: "Resume, profile optimization, and recruiter connects.",
-      },
+    title: "We Train You. We Prepare You. We Place You.",
+    intro:
+      "Two years of structured, practitioner-led training inside your college - building the skills, tools, and confidence that India's top employers hire for. Free of charge, always.",
+    points: [
+      "Communication, aptitude & domain training",
+      "Power BI, SQL, Excel, Looker Studio & Gen AI",
+      "CV prep, mock GDs & PI practice",
+      "Personal branding & LinkedIn optimisation",
+      "Access to 450+ hiring partners",
     ],
   },
 ];
@@ -164,8 +124,8 @@ export default function AudiencePathways() {
 
   return (
     <section className="bg-[#f4f5f9] py-20 md:py-24">
-      <div className="mx-auto max-w-auto px-6">
-        <h2 className="mx-auto max-w-3xl text-center text-4xl font-bold tracking-tight text-[#101322] md:text-6xl">
+      <div className="mx-auto w-full max-w-[1280px] px-6">
+        <h2 className="mx-auto max-w-3xl text-center text-3xl font-bold tracking-tight text-[#101322] md:text-5xl">
           One solution built for colleges, corporates, and students.
         </h2>
 
@@ -178,14 +138,14 @@ export default function AudiencePathways() {
                   key={item.id}
                   type="button"
                   onClick={() => setActiveId(item.id)}
-                  className={`flex h-full min-h-[98px] w-full items-center gap-0 rounded-xl px-2 py-2 text-left text-4xl font-semibold transition md:text-6xl ${
+                  className={`flex h-full min-h-[98px] w-full items-center gap-0 rounded-xl px-2 py-2 text-left text-3xl font-semibold transition md:text-5xl ${
                     isActive
                       ? "text-[#211953]"
                       : "text-[#b4b5c5] hover:text-[#9d9fb2]"
                   }`}
                 >
                   <span
-                    className="mr-[24px] inline-flex w-auto items-center gap-[10px]"
+                    className="mr-[20px] inline-flex w-auto items-center gap-[10px]"
                     aria-hidden
                   >
                     <span
@@ -199,11 +159,7 @@ export default function AudiencePathways() {
                       }`}
                     />
                   </span>
-                  <span
-                    className={
-                      item.id === "corporate" ? "whitespace-nowrap" : ""
-                    }
-                  >
+                  <span className="whitespace-nowrap">
                     {item.label}
                   </span>
                 </button>
@@ -219,31 +175,28 @@ export default function AudiencePathways() {
           </div>
 
           <div>
-            <div className="rounded-3xl border border-[#e5e7ef] bg-[#ebeef4] p-5 md:p-7">
-              <p className="mb-5 text-lg font-medium text-slate-600">
-                {activePath.title}
-              </p>
-              <div className="grid gap-4 sm:grid-cols-2">
-                {activePath.cards.map((card) => (
-                  <article
-                    key={`${activePath.id}-${card.heading}`}
-                    className="rounded-2xl border border-[#ececf4] bg-white p-5"
-                  >
-                    <span className="inline-block rounded-md bg-[#8A63FF] px-2.5 py-1 text-xs font-semibold text-white">
-                      {card.tag}
-                    </span>
-                    <h3 className="mt-3 text-2xl font-semibold text-[#171a28]">
-                      {card.heading}
-                    </h3>
-                    <p className="mt-2 text-base text-slate-500">
-                      {card.detail}
-                    </p>
-                    <div className="mt-4 h-1.5 w-full rounded-full bg-slate-100">
-                      <div className="h-full w-2/3 rounded-full bg-[#8A63FF]/30" />
-                    </div>
-                  </article>
-                ))}
-              </div>
+            <div className="overflow-hidden rounded-3xl border border-[#d7d9e8] bg-gradient-to-br from-[#f4f6ff]/80 via-[#eef1ff]/75 to-[#e8ecff]/75 shadow-[0_12px_40px_rgba(70,80,140,0.14)] backdrop-blur-xl">
+              <article className="p-5 md:p-7">
+                <p className="text-xs font-bold uppercase tracking-wide text-[#8A63FF] md:text-sm">
+                  {activePath.label}
+                </p>
+                <h3 className="mt-2 text-3xl font-bold leading-tight text-[#1e2340] md:text-4xl">
+                  {activePath.title}
+                </h3>
+                <p className="mt-4 text-base leading-relaxed text-[#5a6282] md:text-lg">
+                  {activePath.intro}
+                </p>
+                <ul className="mt-5 space-y-2 text-[#2b3154]">
+                  {activePath.points.map((point) => (
+                    <li key={`${activePath.id}-${point}`} className="flex items-start gap-3">
+                      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#8A63FF]" />
+                      <span className="text-base font-semibold leading-snug md:text-[1.04rem]">
+                        {point}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
             </div>
           </div>
         </div>
