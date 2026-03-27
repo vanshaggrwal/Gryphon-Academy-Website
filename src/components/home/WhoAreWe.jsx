@@ -40,50 +40,33 @@ export default function WhoAreWe() {
       />
 
       <div className="relative mx-auto max-w-7xl px-6">
-        <div className="mb-10 sm:mb-12">
-       
-          <h2 className="max-w-xl text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
-            Who we are
-          </h2>
-          <p className="mt-4 max-w-4xl text-base leading-relaxed text-[#d6e4f7] sm:text-lg">
-            We don&apos;t just train students. We transform institutions,
-            empower graduates, and build the workforce India&apos;s industry
-            demands.
-          </p>
-        </div>
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div>
+            <h2 className="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
+              Who we are
+            </h2>
 
-        <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
-          <article className="h-full rounded-[28px] border border-[#d2dfef] bg-[linear-gradient(145deg,#f7fbff_0%,#ecf3fb_45%,#e4edf7_100%)] p-7 shadow-[0_32px_70px_-42px_rgba(0,8,22,0.9),inset_0_1px_0_rgba(255,255,255,0.85)] sm:p-10">
-            <p className="mb-6 text-xs font-bold uppercase tracking-[0.26em] text-[#2f5f9a] sm:text-sm">
-              Info
-            </p>
-
-            <p className="text-base leading-relaxed text-[#1f2f45] sm:text-lg">
+            <p className="mt-6 text-base leading-relaxed text-[#c8daf0] sm:text-lg">
               Gryphon Academy Pvt. Ltd. is a Pan-India professional training,
               placement facilitation, and institutional development organisation
               founded in 2020. We partner with MBA, Engineering, MCA, and
-              Diploma institutions to embed structured industry readiness
-              training directly into their academic curriculum delivered
-              offline, on-campus, by 350+ certified industry practitioners.
+              Diploma institutions to embed structured, industry-aligned
+              training directly into their academic curriculum — delivered
+              entirely offline, on-campus, by 350+ certified industry
+              practitioners. We are not a coaching institute. We are not an
+              edtech platform. We are the operating bridge between academia and
+              industry — training students inside their colleges, connecting
+              institutions to corporate networks, and placing graduates with
+              India&apos;s top employers at zero cost to all parties.
             </p>
+          </div>
 
-            <p className="mt-6 text-base leading-relaxed text-[#1f2f45] sm:text-lg">
-              We are not a coaching institute. We are not an edtech platform. We
-              are the operating bridge between academia and industry training
-              students inside their colleges, connecting institutions to
-              corporate networks, and placing graduates with India&apos;s top
-              employers at zero cost.
-            </p>
-          </article>
-
-          <div className="mx-auto h-full w-full max-w-md lg:max-w-none">
-            <div className="group relative h-full min-h-105 overflow-hidden rounded-[28px] border border-[#d2dfef] bg-[linear-gradient(145deg,#f7fbff_0%,#e6eff9_100%)] p-3 shadow-[0_32px_70px_-42px_rgba(0,8,22,0.9),inset_0_1px_0_rgba(255,255,255,0.85)]">
-              <img
-                src={teamImage}
-                alt="Gryphon Academy team members"
-                className="h-full w-full rounded-[22px] object-cover object-top"
-              />
-            </div>
+          <div className="flex items-end justify-center lg:justify-end">
+            <img
+              src={teamImage}
+              alt="Gryphon Academy team members"
+              className="max-h-[480px] w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.35)]"
+            />
           </div>
         </div>
       </div>

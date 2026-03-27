@@ -25,33 +25,33 @@ export default function Navbar({ isVisible, isFullWidth, logoSrc }) {
           />
         </a>
 
-        <div className="hidden md:flex gap-4 px-3 font-medium text-white lg:gap-5 lg:px-4 xl:gap-6 xl:px-6">
-          <a href="#home" className="hover:text-yellow-400 transition">
-            Home
-          </a>
-          <a href="#about" className="hover:text-yellow-400 transition">
-            About
-          </a>
-          <a href="#services" className="hover:text-yellow-400 transition">
-            Services
+        <div className="hidden md:flex flex-1 items-center justify-center gap-8 font-medium text-white lg:gap-12 xl:gap-16">
+          <a href="#why-us" className="hover:text-yellow-400 transition">
+            Colleges
           </a>
           <a href="#why-us" className="hover:text-yellow-400 transition">
-            Why Us
+            Corporate
           </a>
           <a href="#events" className="hover:text-yellow-400 transition">
             Events
           </a>
-          <a href="#blogs" className="hover:text-yellow-400 transition">
-            Blog
+          <a href="#contact" className="hover:text-yellow-400 transition">
+            About us
           </a>
           <a href="#contact" className="hover:text-yellow-400 transition">
             Contact
           </a>
         </div>
 
-        <button className="rounded-lg bg-white px-3.5 py-1.5 font-semibold text-[#01224F] transition hover:bg-gray-100 lg:px-4 lg:py-2">
-          Apply Now
-        </button>
+        <a
+          href="#contact"
+          className="group relative hidden shrink-0 overflow-hidden rounded-lg bg-white px-4 py-2 text-sm font-semibold text-[#01224F] transition-all hover:shadow-lg md:inline-block lg:px-5 lg:py-2.5 lg:text-base"
+        >
+          <span className="absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 scale-0 rounded-full bg-yellow-400 opacity-0 transition-all duration-500 ease-out group-hover:scale-100 group-hover:opacity-100" />
+          <span className="relative z-10 transition-colors duration-300">
+            Partner With Us
+          </span>
+        </a>
       </div>
     </nav>
   );
