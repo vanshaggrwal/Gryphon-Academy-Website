@@ -73,7 +73,7 @@ export default function Services() {
                     </span>
                     <span
                       className={`text-4xl transition ${
-                        isActive ? "text-[#7c68ff]" : "text-slate-300"
+                        isActive ? "text-[#3a10b9ff]" : "text-slate-300"
                       }`}
                       aria-hidden
                     >
@@ -90,13 +90,13 @@ export default function Services() {
             <div className="grid gap-4 sm:grid-cols-2">
               {activeTab.cards.map((card) => (
                 <article key={card.title} className="rounded-2xl border border-white bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-                  <span className="inline-flex rounded-full bg-[#7c68ff]/10 px-3 py-1 text-xs font-semibold text-[#6e58ff]">
+                  <span className="inline-flex rounded-full bg-[#3a10b9ff]/10 px-3 py-1 text-xs font-semibold text-[#3a10b9ff]">
                     {card.tag}
                   </span>
                   <h3 className="mt-3 text-2xl font-semibold text-[#171a28]">{card.title}</h3>
                   <p className="mt-2 text-base text-slate-500">{card.meta}</p>
                   <div className="mt-4 h-1.5 w-full rounded-full bg-slate-100">
-                    <div className="h-full w-2/3 rounded-full bg-[#7c68ff]/35" />
+                    <div className="h-full w-2/3 rounded-full bg-[#3a10b9ff]/35" />
                   </div>
                 </article>
               ))}

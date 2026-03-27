@@ -85,7 +85,7 @@ function ConnectorArrow({ activeIndex, totalItems }) {
         y1={pathData.lineY}
         x2="28"
         y2={pathData.lineY}
-        stroke="#8A63FF"
+        stroke="#3a10b9ff"
         strokeWidth="3"
         strokeLinecap="round"
       />
@@ -94,14 +94,14 @@ function ConnectorArrow({ activeIndex, totalItems }) {
         y1={pathData.lineY}
         x2="68"
         y2={pathData.lineY}
-        stroke="#8A63FF"
+        stroke="#3a10b9ff"
         strokeWidth="3"
         strokeLinecap="round"
       />
       <path
         d={pathData.d}
         fill="none"
-        stroke="#8A63FF"
+        stroke="#3a10b9ff"
         strokeWidth="3"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -109,7 +109,7 @@ function ConnectorArrow({ activeIndex, totalItems }) {
       <path
         d={`M 232 ${pathData.arrowY} L 220 ${pathData.arrowY - 10} M 232 ${pathData.arrowY} L 220 ${pathData.arrowY + 10}`}
         fill="none"
-        stroke="#8A63FF"
+        stroke="#3a10b9ff"
         strokeWidth="3"
         strokeLinecap="round"
       />
@@ -150,12 +150,12 @@ export default function AudiencePathways() {
                   >
                     <span
                       className={`h-[3px] w-10 rounded-full ${
-                        isActive ? "bg-[#8A63FF]" : "bg-transparent"
+                        isActive ? "bg-[#3a10b9ff]" : "bg-transparent"
                       }`}
                     />
                     <span
                       className={`h-[3px] w-10 rounded-full ${
-                        isActive ? "bg-[#8A63FF]" : "bg-transparent"
+                        isActive ? "bg-[#3a10b9ff]" : "bg-transparent"
                       }`}
                     />
                   </span>
@@ -177,7 +177,7 @@ export default function AudiencePathways() {
           <div>
             <div className="overflow-hidden rounded-3xl border border-[#d7d9e8] bg-gradient-to-br from-[#f4f6ff]/80 via-[#eef1ff]/75 to-[#e8ecff]/75 shadow-[0_12px_40px_rgba(70,80,140,0.14)] backdrop-blur-xl">
               <article className="p-5 md:p-7">
-                <p className="text-xs font-bold uppercase tracking-wide text-[#8A63FF] md:text-sm">
+                <p className="text-xs font-bold uppercase tracking-wide text-[#3a10b9ff] md:text-sm">
                   {activePath.label}
                 </p>
                 <h3 className="mt-2 text-3xl font-bold leading-tight text-[#1e2340] md:text-4xl">
@@ -189,7 +189,7 @@ export default function AudiencePathways() {
                 <ul className="mt-5 space-y-2 text-[#2b3154]">
                   {activePath.points.map((point) => (
                     <li key={`${activePath.id}-${point}`} className="flex items-start gap-3">
-                      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#8A63FF]" />
+                      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-[#3a10b9ff]" />
                       <span className="text-base font-semibold leading-snug md:text-[1.04rem]">
                         {point}
                       </span>

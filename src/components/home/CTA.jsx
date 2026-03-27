@@ -17,7 +17,7 @@ export default function CTA() {
 
   return (
     <section
-      className="relative overflow-hidden bg-[#01224F] py-24 text-center text-white sm:py-32"
+      className="relative overflow-hidden bg-[#01224F] py-16 text-center text-white sm:py-24 md:py-28"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
@@ -43,36 +43,36 @@ export default function CTA() {
       />
 
       <div className="relative z-10 mx-auto max-w-4xl px-6">
-        <h2 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl lg:text-[3.4rem]">
+        <h2 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl lg:text-[2.8rem]">
           <span className="block">Your Students Are Ready to Be Trained.</span>
           <span className="mt-2 block bg-gradient-to-r from-white via-[#8ab4f0] to-[#5b91e3] bg-clip-text text-transparent">
             Your Next Hire Is Already in Our Network.
           </span>
         </h2>
 
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6">
           <a
             href="#contact"
-            className="group relative overflow-hidden rounded-xl bg-white px-7 py-3.5 text-base font-semibold text-[#01224F] shadow-[0_0_30px_rgba(47,103,230,0.3)] transition-all duration-300 hover:shadow-[0_0_40px_rgba(47,103,230,0.5)] hover:scale-[1.03]"
+            className="group relative overflow-hidden rounded-xl bg-white px-6 py-3 text-base font-semibold text-[#01224F] shadow-[0_0_30px_rgba(47,103,230,0.3)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_40px_rgba(47,103,230,0.5)]"
           >
             <span className="relative z-10">Partner With Us</span>
             <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-[#2f67e6]/10 to-transparent transition-transform duration-500 group-hover:translate-x-full" />
           </a>
 
-          <span className="hidden text-[#3a6aa8] sm:inline text-2xl">·</span>
+          <span className="hidden text-xl text-[#3a6aa8] sm:inline">·</span>
 
           <a
             href="#contact"
-            className="rounded-xl border border-white/25 bg-white/5 px-7 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-white/50 hover:bg-white/10 hover:scale-[1.03]"
+            className="rounded-xl border border-white/25 bg-white/5 px-6 py-3 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:scale-[1.03] hover:border-white/50 hover:bg-white/10"
           >
             Register as a Hiring Partner
           </a>
 
-          <span className="hidden text-[#3a6aa8] sm:inline text-2xl">·</span>
+          <span className="hidden text-xl text-[#3a6aa8] sm:inline">·</span>
 
           <a
             href="#contact"
-            className="rounded-xl border border-white/25 bg-white/5 px-7 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-white/50 hover:bg-white/10 hover:scale-[1.03]"
+            className="rounded-xl border border-white/25 bg-white/5 px-6 py-3 text-base font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:scale-[1.03] hover:border-white/50 hover:bg-white/10"
           >
             I Am a Student
           </a>
